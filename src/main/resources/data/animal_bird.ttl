@@ -1,0 +1,61 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
+@prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
+
+am:Bird rdfs:subClassOf am:wing,
+	[a owl:Restriction ;
+	   owl:onProperty am:spawn ;
+	   owl:allValuesFrom am:Egg] ;
+	rdfs:label "Bird";
+	owl:equivalentClass
+       [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
+
+am:FlyingBird rdfs:subClassOf am:Bird,
+	[a owl:Restriction ;
+	  owl:onProperty am:spawn ;
+	  owl:allValuesFrom am:Egg],
+	[a owl:Restriction;
+	  owl:onProperty am:move ;
+	  owl:allValuesFrom am:fly];
+	rdfs:label "Flying bird" .
+
+am:RunningBird rdfs:subClassOf am:Bird,
+	[a owl:Restriction;
+	  owl:onProperty am:move ;
+	  owl:allValuesFrom am:run];
+    rdfs:label "Running bird" ;
+	owl:disjointWith am:FlyingBird .
+
+am:SwimmingBird rdfs:subClassOf am:Bird,
+	[a owl:Restriction ;
+	  owl:onProperty am:move ;
+	  owl:allValuesFrom am:swim] ;
+	rdfs:label "Swimming bird" ;
+	owl:disjointWith am:FlyingBird .
+
+am:Ostrich owl:intersectionOf (am:RunningBird am:herbivore),
+	[a owl:Restriction ;
+	   owl:onProperty am:longevity;
+	   owl:hasValue "50"] ;
+	am:animalName "Ostrich" .
+
+am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore),
+	[a owl:Restriction ;
+	   owl:onProperty am:longevity;
+	   owl:hasValue "20"] ;
+	am:animalName "Penguin" .
+
+am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore) ,
+	[a owl:Restriction ;
+	   owl:onProperty am:longevity;
+	   owl:hasValue "4"];
+	am:animalName "Sparrow" .
+
+am:Dove owl:intersectionOf (am:FlyingBird am:herbivore),
+	[a owl:Restriction;
+	   owl:onProperty am:longevity;
+	   owl:hasValue "7"] ;
+    am:animalName "Dove" .
+

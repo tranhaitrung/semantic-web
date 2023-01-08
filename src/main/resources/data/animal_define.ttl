@@ -1,0 +1,85 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
+@prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
+
+am:Animal a rdfs:Class ;
+	rdfs:label "Animal" ;
+	owl:equivalentClass
+       [owl:unionOf (am:Bird am:Reptile am:Fish)].
+
+am:animalName a rdf:Property;
+    rdfs:domain am:Animal;
+    rdfs:range rdfs:Literal .
+
+am:move a rdfs:property;
+	rdfs:label "move".
+
+am:spawn rdfs:domain am:Egg;
+    rdfs:range am:Egg .
+
+am:offspring rdfs:domain am:Animal;
+    rdfs:range am:Animal.
+
+am:herbivore owl:subClassOf
+	[a owl:Restriction;
+	owl:onProperty am:eats;
+	owl:allValuesFrom
+		[a owl:Class;
+          owl:equivalentClass[
+           owl:unionOf
+            (am:Plant
+             [a owl:Restriction;
+              owl:onProperty am:isPartOf;
+              owl:allValuesFrom am:Plant])]]] .
+am:carnivore owl:intersectionOf
+    (am:Animal
+         [a owl:Restriction;
+             owl:onProperty am:eats;
+             owl:someValuesFrom am:Animal]
+    ) .
+
+am:vertebrates owl:intersectionOf
+    (am:Animal
+         [a owl:Restriction;
+            owl:onProperty am:skeleton;
+            owl:someValuesFrom am:backbone]
+    ) .
+
+am:longevity a owl:DatatypeProperty;
+    rdfs:domain am:Animal;
+    rdfs:range xsd:nonNegativeInteger .
+
+am:hasWing rdfs:subClassOf
+	[a owl:Restriction;
+       owl:allValuesFrom am:body;
+	   owl:onProperty am:isPartOf] .
+
+am:hasLeg rdfs:subClassOf
+	[a owl:Restriction;
+       owl:allValuesFrom am:body;
+	   owl:onProperty am:isPartOf] .
+
+am:hasGill rdfs:subClassOf
+	[a owl:Restriction;
+       owl:allValuesFrom am:body ;
+	   owl:onProperty am:isPartOf] .
+
+am:wing owl:intersectionOf(am:Animal
+	[a owl:Restriction;
+	owl:onProperty am:hasWing;
+	owl:allValuesFrom am:Animal
+	]) .
+
+am:leg owl:intersectionOf(am:Animal
+	[a owl:Restriction;
+	owl:onProperty am:hasLeg;
+	owl:allValuesFrom am:Animal
+	]) .
+
+am:gill owl:intersectionOf(am:Animal
+	[a owl:Restriction;
+	owl:onProperty am:hasGill;
+	owl:allValuesFrom am:Animal
+	]) .
