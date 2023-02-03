@@ -1,5 +1,7 @@
 ###
-GET http://localhost:3000/api/v1/bird?name=123
+GET http://localhost:3000/api/v1/bird?search=Animal
 Accept: application/json
 
 ###
+GET http://localhost:3000/api/v1/data
+Accept: application/json

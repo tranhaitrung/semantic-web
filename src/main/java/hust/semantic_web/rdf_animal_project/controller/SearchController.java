@@ -16,9 +16,20 @@ public class SearchController {
     private RdfService rdfService;
 
     @GetMapping("/bird")
-    public ResponseEntity<?> searchBird(@RequestParam(required = false) String name) {
+    public ResponseEntity<?> searchBird(@RequestParam(required = false) String search) {
         try {
-            Object res = rdfService.searchBird(name);
+            Object res = rdfService.searchBird(search);
+            return ResponseEntity.ok(res);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/data")
+    public ResponseEntity<?> getAllData() {
+        try {
+            Object res = rdfService.getAll();
             return ResponseEntity.ok(res);
         } catch (Exception e) {
             e.printStackTrace();

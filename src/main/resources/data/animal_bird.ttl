@@ -35,27 +35,19 @@ am:SwimmingBird rdfs:subClassOf am:Bird,
 	rdfs:label "Swimming bird" ;
 	owl:disjointWith am:FlyingBird .
 
-am:Ostrich owl:intersectionOf (am:RunningBird am:herbivore),
-	[a owl:Restriction ;
-	   owl:onProperty am:longevity;
-	   owl:hasValue "50"] ;
+am:Ostrich owl:intersectionOf (am:RunningBird am:herbivore);
+    am:longevity 50;
 	am:animalName "Ostrich" .
 
-am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore),
-	[a owl:Restriction ;
-	   owl:onProperty am:longevity;
-	   owl:hasValue "20"] ;
+am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore);
+	am:longevity 20;
 	am:animalName "Penguin" .
 
-am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore) ,
-	[a owl:Restriction ;
-	   owl:onProperty am:longevity;
-	   owl:hasValue "4"];
+am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore);
+	am:longevity 4;
 	am:animalName "Sparrow" .
 
-am:Dove owl:intersectionOf (am:FlyingBird am:herbivore),
-	[a owl:Restriction;
-	   owl:onProperty am:longevity;
-	   owl:hasValue "7"] ;
+am:Dove owl:intersectionOf (am:FlyingBird am:herbivore);
+	am:longevity 4;
     am:animalName "Dove" .
 

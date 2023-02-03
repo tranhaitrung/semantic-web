@@ -12,13 +12,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RdfAnimalProjectApplication {
     public static Model defineAnimalModel;
     public static Model birdModel;
-    public static InfModel infmodel;
+    public static Model mergeModel;
 
     public static void main(String[] args) {
         SpringApplication.run(RdfAnimalProjectApplication.class, args);
-        defineAnimalModel = File.readFileRdf(Constant.PathFileTtl.animalDefinePath);
-        birdModel = File.readFileRdf(Constant.PathFileTtl.animalBirdPath);
-        infmodel = ModelFactory.createRDFSModel(defineAnimalModel, birdModel);
+//        defineAnimalModel = File.readFileRdf(Constant.PathFileTtl.animalDefinePath);
+//        birdModel = File.readFileRdf(Constant.PathFileTtl.animalBirdPath);
+//        mergeModel = defineAnimalModel.union(birdModel);
 //        infmodel.write(System.out);
     }
 
