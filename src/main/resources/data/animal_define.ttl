@@ -9,7 +9,8 @@ am:Animal a rdfs:Class ;
 	owl:equivalentClass
        [owl:unionOf (am:Bird am:Reptile am:Fish)].
 
-am:animalName a rdf:Property;
+am:animalName a rdf:property;
+    rdfs:label "name";
     rdfs:domain am:Animal;
     rdfs:range rdfs:Literal .
 
@@ -17,10 +18,8 @@ am:move a rdfs:property;
 	rdfs:label "move".
 
 am:spawn rdfs:domain am:Egg;
-    rdfs:range am:Egg .
-
-am:offspring rdfs:domain am:Animal;
-    rdfs:range am:Animal.
+    rdfs:range am:Egg ;
+    rdfs:label "spawn".
 
 am:herbivore owl:subClassOf
 	[a owl:Restriction;
@@ -32,22 +31,30 @@ am:herbivore owl:subClassOf
             (am:Plant
              [a owl:Restriction;
               owl:onProperty am:isPartOf;
-              owl:allValuesFrom am:Plant])]]] .
+              owl:allValuesFrom am:Plant])]]];
+    rdfs:label "herbivore".
 am:carnivore owl:intersectionOf
     (am:Animal
          [a owl:Restriction;
              owl:onProperty am:eats;
              owl:someValuesFrom am:Animal]
-    ) .
+    );
+    rdfs:label "carnivore".
 
 am:vertebrates owl:intersectionOf
     (am:Animal
          [a owl:Restriction;
             owl:onProperty am:skeleton;
             owl:someValuesFrom am:backbone]
-    ) .
+    );
+    rdfs:label "vertebrates".
 
 am:longevity a owl:DatatypeProperty;
+    rdfs:domain am:Animal;
+    rdfs:range xsd:nonNegativeInteger;
+    rdfs:label "longevity".
+
+am:reproduction a owl:DatatypeProperty;
     rdfs:domain am:Animal;
     rdfs:range xsd:nonNegativeInteger .
 

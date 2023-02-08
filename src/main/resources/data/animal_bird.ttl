@@ -4,11 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
 @prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
 
-am:Bird rdfs:subClassOf am:wing,
-	[a owl:Restriction ;
-	   owl:onProperty am:spawn ;
-	   owl:allValuesFrom am:Egg] ;
-	rdfs:label "Bird";
+am:Bird rdfs:label "Bird";
 	owl:equivalentClass
        [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
 
@@ -19,35 +15,113 @@ am:FlyingBird rdfs:subClassOf am:Bird,
 	[a owl:Restriction;
 	  owl:onProperty am:move ;
 	  owl:allValuesFrom am:fly];
-	rdfs:label "Flying bird" .
+	am:animalName "Flying bird" .
 
 am:RunningBird rdfs:subClassOf am:Bird,
 	[a owl:Restriction;
 	  owl:onProperty am:move ;
 	  owl:allValuesFrom am:run];
-    rdfs:label "Running bird" ;
+    am:animalName "Running bird" ;
 	owl:disjointWith am:FlyingBird .
 
 am:SwimmingBird rdfs:subClassOf am:Bird,
 	[a owl:Restriction ;
 	  owl:onProperty am:move ;
 	  owl:allValuesFrom am:swim] ;
-	rdfs:label "Swimming bird" ;
+	am:animalName "Swimming bird" ;
 	owl:disjointWith am:FlyingBird .
 
 am:Ostrich owl:intersectionOf (am:RunningBird am:herbivore);
-    am:longevity 50;
-	am:animalName "Ostrich" .
+    am:longevity "50"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:animalName "Ostrich" .
 
 am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore);
-	am:longevity 20;
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:animalName "Penguin" .
 
 am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore);
-	am:longevity 4;
+	am:longevity "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:animalName "Sparrow" .
 
 am:Dove owl:intersectionOf (am:FlyingBird am:herbivore);
-	am:longevity 4;
+	am:longevity "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
     am:animalName "Dove" .
 
+am:Kiwi owl:intersectionOf (am:RunningBird  am:herbivore);
+	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Kiwi" .
+
+am:am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Eagle" .
+
+am:Albatross owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Albatross" .
+
+am:Hummingbird owl:intersectionOf (am:FlyingBird am:herbivore);
+	am:longevity "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Hummingbird" .
+
+am:Pelican owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "25"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Pelican" .
+
+am:Seagull owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Seagull" .
+
+am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "6"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Kingfisher" .
+
+am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Kingfisher" .
+
+am:Parrot owl:intersectionOf (am:FlyingBird am:herbivore);
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Parrot" .
+
+am:Vulture owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Vulture" .
+
+am:Hawk owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Hawk" .
+
+am:Crow owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "7"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Crow" .
+
+am:Swallow owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "16"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Swallow" .
+
+am:Warbler owl:intersectionOf (am:FlyingBird am:carnivore);
+	am:longevity "10"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Warbler" .
+
+am:Swan owl:intersectionOf (am:FlyingBird am:herbivore);
+	am:longevity "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "8"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:animalName "Swan" .
