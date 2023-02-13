@@ -9,10 +9,20 @@ am:Animal a rdfs:Class ;
 	owl:equivalentClass
        [owl:unionOf (am:Bird am:Reptile am:Fish)].
 
+am:Bird rdfs:label "Bird";
+    rdfs:comment "A class representing a bird species."
+	owl:equivalentClass
+       [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
+
+am:Organism a rdfs:Class ;
+    rdfs:label "Organism" ;
+    rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
+
+
 am:animalName a rdf:property;
     rdfs:label "name";
     rdfs:domain am:Animal;
-    rdfs:range rdfs:Literal .
+    rdfs:range xsd:string .
 
 am:move a rdfs:property;
 	rdfs:label "move".
@@ -90,3 +100,66 @@ am:gill owl:intersectionOf(am:Animal
 	owl:onProperty am:hasGill;
 	owl:allValuesFrom am:Animal
 	]) .
+
+am:high a rdfs:property;
+    rdfs:label "high";
+    rdfs:domain am:Animal;
+    rdfs:description "high of animal";
+    rdfs:range xsd:nonNegativeDouble .
+
+am:weigh a rdfs:property;
+    rdfs:label "weigh";
+    rdfs:domain am:Animal;
+    rdfs:description "weigh of animal";
+    rdfs:range xsd:nonNegativeDouble .
+
+# Thức ăn
+am:food a rdfs:property;
+    rdfs:label "food";
+    rdfs:description "something animal eat";
+    rdfs:domain am:Organism;
+    rdfs:range xsd:string .
+
+# Sải cánh
+am:wingspan a rdfs:property;
+    rdfs:label "wingspan";
+    rdfs:domain am:Bird;
+    rdfs:description "the length of the bird's wings";
+    rdfs:range xsd:nonNegativeDouble .
+
+# Tập tính
+am:custom a rdfs:property;
+    rdfs:label "custom";
+    rdfs:description "Living habits";
+    rdfs:domain am:Bird;
+    rdfs:range xsd:string .
+
+# Môi trường sống
+am:habitat a rdfs:property;
+    rdfs:label "habitat";
+    rdfs:description "the space in which animals live";
+    rdfs:range xsd:string .
+
+am:speed a rdfs:property;
+    rdfs:label "speed";
+    rdfs:description "an animal's ability to move fast or slow";
+    rdfs:domain am:Animal;
+    rdfs:range xsd:nonNegativeDouble .
+
+am:color a rdfs:property;
+    rdfs:label "color";
+
+am:class a rdfs:property;
+    rdfs:label "class" ;
+    rdfs:comment "A taxonomic class of the bird." ;
+    rdfs:domain am:Bird ;
+    rdfs:range xsd:string .
+
+am:binomialName a rdfs:property;
+     rdfs:label "binomialName" ;
+     rdfs:comment "The binomial name of the bird." ;
+     rdfs:domain am:Bird ;
+     rdfs:range xsd:string .
+
+
+
