@@ -31,97 +31,254 @@ am:SwimmingBird rdfs:subClassOf am:Bird,
 	am:animalName "Swimming bird" ;
 	owl:disjointWith am:FlyingBird .
 
-am:Ostrich owl:intersectionOf (am:RunningBird am:herbivore);
-    am:longevity "50"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+am:Ostrich owl:intersectionOf (am:RunningBird am:omnivore);
+    am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "50"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:height "250"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "130000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "200"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black and grey"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Struthio camelus"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:animalName "Ostrich" .
 
 am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore);
-	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "120"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "23000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "50"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "frozen area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black and white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Acrocephalus tyranneus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Penguin" .
 
 am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore);
-	am:longevity "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "7"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "6"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "16"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "18"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "mountain and delta"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black and yellow"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Lonchura striata domestica"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Sparrow" .
 
 am:Dove owl:intersectionOf (am:FlyingBird am:herbivore);
-	am:longevity "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "7"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "rural grasslands"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, yellow, brown and green"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Streptopelia chinensis tigrina"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:animalName "Dove" .
 
-am:Kiwi owl:intersectionOf (am:RunningBird  am:herbivore);
+am:Kiwi owl:intersectionOf (am:RunningBird  am:omnivore);
 	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "1000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live solitary"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "new zealand"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "brown and grey"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Apteryx mantelli"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Kiwi" .
 
 am:am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "6500"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "200"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live solitary"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "mountain and savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "300"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "brown, yellow"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Aquila chrysaetos"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Eagle" .
 
 am:Albatross owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "90"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "4000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "240"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "coast, island"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "120"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, brown,  white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Thalassarche melanophris"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Albatross" .
 
 am:Hummingbird owl:intersectionOf (am:FlyingBird am:herbivore);
 	am:longevity "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "9"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "12"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live solitary"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "forest, savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "red, yellow, green"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Selasphorus rufus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Hummingbird" .
 
 am:Pelican owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "25"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "160"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "10000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "280"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "river area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "brown, white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Pelecanus onocrotalus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Pelican" .
 
 am:Seagull owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "1300"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "170"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "coast, island"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "80"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, brown, white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "PLarus marinus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Seagull" .
 
 am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "6"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:animalName "Kingfisher" .
-
-am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
-	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "16"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "13"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "17"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live solitary"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "river area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "90"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "green, blue, orange"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Alcedo meninting"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Kingfisher" .
 
 am:Parrot owl:intersectionOf (am:FlyingBird am:herbivore);
-	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "10"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "20"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "15"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "forest, jungle, savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "green, blue"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Chlorostilbon sp"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Parrot" .
 
 am:Vulture owl:intersectionOf (am:FlyingBird am:carnivore);
-	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "2"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "65"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "4000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "150"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live solitary"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, white, grey"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Coragyps atratus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Vulture" .
 
 am:Hawk owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "20"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "300"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "forest, jungle, mountain"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, grey"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Accipiter badius"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Hawk" .
 
 am:Crow owl:intersectionOf (am:FlyingBird am:carnivore);
-	am:longevity "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "8"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "7"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "50"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "600"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "forest, jungle, mountain, delta"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Corvus corone"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Crow" .
 
 am:Swallow owl:intersectionOf (am:FlyingBird am:carnivore);
-	am:longevity "16"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:longevity "10"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "3"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "20"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "50"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "jungle, delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Hirundo leucosoma"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Swallow" .
 
-am:Warbler owl:intersectionOf (am:FlyingBird am:carnivore);
+am:Warbler owl:intersectionOf (am:FlyingBird am:omnivore);
 	am:longevity "10"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "5"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "black, white, orange"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Copsychus malabaricus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Warbler" .
 
-am:Swan owl:intersectionOf (am:FlyingBird am:herbivore);
+am:Swan owl:intersectionOf (am:SwimmingBird am:herbivore);
 	am:longevity "15"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "8"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    am:height "150"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:weigh "10000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:wingspan "200"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:custom "live in flock"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:habitat "delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
+    am:color "white"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:biomialName "Cygnus olor"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Swan" .

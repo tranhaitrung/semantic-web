@@ -18,6 +18,10 @@ am:Organism a rdfs:Class ;
     rdfs:label "Organism" ;
     rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
 
+am:hasUnit a owl:DatatypeProperty;
+    rdfs:domain am:Property;
+    rdfs:range xsd:string;
+    rdfs:label "has unit".
 
 am:animalName a rdf:property;
     rdfs:label "name";
@@ -43,6 +47,7 @@ am:herbivore owl:subClassOf
               owl:onProperty am:isPartOf;
               owl:allValuesFrom am:Plant])]]];
     rdfs:label "herbivore".
+
 am:carnivore owl:intersectionOf
     (am:Animal
          [a owl:Restriction;
@@ -51,6 +56,17 @@ am:carnivore owl:intersectionOf
     );
     rdfs:label "carnivore".
 
+am:omnivore owl:intersectionOf
+  (am:Animal
+       [a owl:Restriction;
+           owl:onProperty am:eats;
+           owl:someValuesFrom am:Plant]
+  am:Animal
+       [a owl:Restriction;
+           owl:onProperty am:eats;
+           owl:someValuesFrom am:Animal]
+  );
+  rdfs:label "omnivore".
 am:vertebrates owl:intersectionOf
     (am:Animal
          [a owl:Restriction;
@@ -100,18 +116,20 @@ am:gill owl:intersectionOf(am:Animal
 	owl:onProperty am:hasGill;
 	owl:allValuesFrom am:Animal
 	]) .
-
-am:high a rdfs:property;
-    rdfs:label "high";
+#chiều cao
+am:height a rdfs:property;
+    rdfs:label "height";
     rdfs:domain am:Animal;
-    rdfs:description "high of animal";
-    rdfs:range xsd:nonNegativeDouble .
-
+    rdfs:description "height of animal";
+    rdfs:range xsd:nonNegativeDouble;
+    am:hasUnit "cm" .
+#cân nặng
 am:weigh a rdfs:property;
     rdfs:label "weigh";
     rdfs:domain am:Animal;
     rdfs:description "weigh of animal";
-    rdfs:range xsd:nonNegativeDouble .
+    rdfs:range xsd:nonNegativeDouble;
+    am:hasUnit "g" .
 
 # Thức ăn
 am:food a rdfs:property;
@@ -125,8 +143,8 @@ am:wingspan a rdfs:property;
     rdfs:label "wingspan";
     rdfs:domain am:Bird;
     rdfs:description "the length of the bird's wings";
-    rdfs:range xsd:nonNegativeDouble .
-
+    rdfs:range xsd:nonNegativeDouble;
+    am:hasUnit "cm" .
 # Tập tính
 am:custom a rdfs:property;
     rdfs:label "custom";
@@ -140,22 +158,27 @@ am:habitat a rdfs:property;
     rdfs:description "the space in which animals live";
     rdfs:range xsd:string .
 
+#tốc độ di chuyển
 am:speed a rdfs:property;
     rdfs:label "speed";
     rdfs:description "an animal's ability to move fast or slow";
     rdfs:domain am:Animal;
-    rdfs:range xsd:nonNegativeDouble .
+    rdfs:range xsd:nonNegativeDouble;
+    am:hasUnit "km/h" .
 
 am:color a rdfs:property;
     rdfs:label "color";
+    rdfs:description "the animal's color";
+    rdfs:domain am:Animal;
+    rdfs:range xsd:string .
 
-am:class a rdfs:property;
+am:biomialClass a rdfs:property;
     rdfs:label "class" ;
     rdfs:comment "A taxonomic class of the bird." ;
     rdfs:domain am:Bird ;
     rdfs:range xsd:string .
 
-am:binomialName a rdfs:property;
+am:biomialName a rdfs:property;
      rdfs:label "binomialName" ;
      rdfs:comment "The binomial name of the bird." ;
      rdfs:domain am:Bird ;
