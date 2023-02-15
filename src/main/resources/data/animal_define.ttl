@@ -4,19 +4,29 @@
 @prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
 @prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
 
+am:Organism a owl:Class ;
+    rdfs:label "Organism" ;
+    rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
+
 am:Animal a owl:Class ;
 	rdfs:label "Animal" ;
 	owl:equivalentClass
        [owl:unionOf (am:Bird am:Reptile am:Fish)].
 
-am:Bird rdfs:label "Bird";
+am:spawn a owl:Class;
+    rdfs:subClassOf am:Animal;
+    rdfs:label "spawn";
+    rdfs:comment "A class representing animals that lay eggs";
+    owl:equivalentClass [ a owl:Restriction ;
+                         owl:onProperty am:laysEggs ;
+                         owl:allValuesFrom am:Egg
+                       ].
+
+am:Bird rdfs:subClassOf am:spawn;
+    rdfs:label "Bird";
     rdfs:comment "A class representing a bird species.";
 	owl:equivalentClass
        [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
-
-am:Organism a owl:Class ;
-    rdfs:label "Organism" ;
-    rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
 
 am:hasUnit a owl:DatatypeProperty;
     rdfs:domain am:Animal;
@@ -46,15 +56,6 @@ am:canRun a owl:ObjectProperty;
     rdfs:domain am:Bird;
     rdfs:range xsd:boolean.
 
-am:spawn a owl:Class;
-    rdfs:subClassOf am:Animal;
-    rdfs:label "spawn";
-    rdfs:comment "A class representing animals that lay eggs";
-    owl:equivalentClass [ a owl:Restriction ;
-                         owl:onProperty am:laysEggs ;
-                         owl:allValuesFrom am:Egg
-                       ].
-
 am:herbivore a owl:Class ;
  owl:intersectionOf
     (am:Animal
@@ -65,7 +66,8 @@ am:herbivore a owl:Class ;
     rdfs:comment "Động vật ăn cỏ";
     rdfs:label "herbivore".
 
-am:carnivore owl:intersectionOf
+am:carnivore a owl:Class ;
+    owl:intersectionOf
     (am:Animal
          [a owl:Restriction;
              owl:onProperty am:eats;
@@ -74,12 +76,12 @@ am:carnivore owl:intersectionOf
     rdfs:comment "Động vật ăn thịt";
     rdfs:label "carnivore".
 
-am:omnivore owl:intersectionOf
+am:omnivore a owl:Class ;
+  owl:intersectionOf
   (am:Animal
        [a owl:Restriction;
            owl:onProperty am:eats;
            owl:someValuesFrom am:Plant]
-  am:Animal
        [a owl:Restriction;
            owl:onProperty am:eats;
            owl:someValuesFrom am:Animal]
