@@ -41,8 +41,8 @@ am:Ostrich owl:intersectionOf (am:RunningBird am:omnivore);
     am:habitat "savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black and grey"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Struthio camelus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Struthio camelus"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:animalName "Ostrich" .
 
 am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore);
@@ -55,8 +55,8 @@ am:Penguin owl:intersectionOf (am:SwimmingBird am:carnivore);
     am:habitat "frozen area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black and white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Acrocephalus tyranneus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Acrocephalus tyranneus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Penguin" .
 
 am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore);
@@ -69,8 +69,8 @@ am:Sparrow owl:intersectionOf (am:FlyingBird am:herbivore);
     am:habitat "mountain and delta"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black and yellow"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Lonchura striata domestica"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Lonchura striata domestica"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Sparrow" .
 
 am:Dove owl:intersectionOf (am:FlyingBird am:herbivore);
@@ -83,8 +83,8 @@ am:Dove owl:intersectionOf (am:FlyingBird am:herbivore);
     am:habitat "rural grasslands"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "25"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, yellow, brown and green"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Streptopelia chinensis tigrina"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Streptopelia chinensis tigrina"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:animalName "Dove" .
 
 am:Kiwi owl:intersectionOf (am:RunningBird  am:omnivore);
@@ -97,8 +97,8 @@ am:Kiwi owl:intersectionOf (am:RunningBird  am:omnivore);
     am:habitat "new zealand"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "brown and grey"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Apteryx mantelli"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Apteryx mantelli"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Kiwi" .
 
 am:am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -111,8 +111,8 @@ am:am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "mountain and savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "300"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "brown, yellow"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Aquila chrysaetos"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Aquila chrysaetos"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Eagle" .
 
 am:Albatross owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -125,8 +125,8 @@ am:Albatross owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "coast, island"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "120"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, brown,  white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Thalassarche melanophris"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Thalassarche melanophris"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Albatross" .
 
 am:Hummingbird owl:intersectionOf (am:FlyingBird am:herbivore);
@@ -139,8 +139,8 @@ am:Hummingbird owl:intersectionOf (am:FlyingBird am:herbivore);
     am:habitat "forest, savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "red, yellow, green"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Selasphorus rufus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Selasphorus rufus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Hummingbird" .
 
 am:Pelican owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -153,8 +153,8 @@ am:Pelican owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "river area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "brown, white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Pelecanus onocrotalus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Pelecanus onocrotalus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Pelican" .
 
 am:Seagull owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -167,8 +167,8 @@ am:Seagull owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "coast, island"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "80"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, brown, white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "PLarus marinus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "PLarus marinus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Seagull" .
 
 am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -181,8 +181,8 @@ am:Kingfisher owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "river area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "90"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "green, blue, orange"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Alcedo meninting"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Alcedo meninting"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Kingfisher" .
 
 am:Parrot owl:intersectionOf (am:FlyingBird am:herbivore);
@@ -195,8 +195,8 @@ am:Parrot owl:intersectionOf (am:FlyingBird am:herbivore);
     am:habitat "forest, jungle, savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "green, blue"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Chlorostilbon sp"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Chlorostilbon sp"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Parrot" .
 
 am:Vulture owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -209,8 +209,8 @@ am:Vulture owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "savanna"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, white, grey"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Coragyps atratus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Coragyps atratus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Vulture" .
 
 am:Hawk owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -223,8 +223,8 @@ am:Hawk owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "forest, jungle, mountain"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "70"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, grey"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Accipiter badius"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Accipiter badius"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Hawk" .
 
 am:Crow owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -237,8 +237,8 @@ am:Crow owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "forest, jungle, mountain, delta"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "60"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Corvus corone"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Corvus corone"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Crow" .
 
 am:Swallow owl:intersectionOf (am:FlyingBird am:carnivore);
@@ -251,8 +251,8 @@ am:Swallow owl:intersectionOf (am:FlyingBird am:carnivore);
     am:habitat "jungle, delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Hirundo leucosoma"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Hirundo leucosoma"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Swallow" .
 
 am:Warbler owl:intersectionOf (am:FlyingBird am:omnivore);
@@ -265,8 +265,8 @@ am:Warbler owl:intersectionOf (am:FlyingBird am:omnivore);
     am:habitat "delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "black, white, orange"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Copsychus malabaricus"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Copsychus malabaricus"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Warbler" .
 
 am:Swan owl:intersectionOf (am:SwimmingBird am:herbivore);
@@ -279,6 +279,6 @@ am:Swan owl:intersectionOf (am:SwimmingBird am:herbivore);
     am:habitat "delta, river area"^^<http://www.w3.org/2001/XMLSchema#string>;
     am:speed "35"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:color "white"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
-    am:biomialName "Cygnus olor"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialClass "Aves"^^<http://www.w3.org/2001/XMLSchema#string>;
+    am:binomialName "Cygnus olor"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Swan" .

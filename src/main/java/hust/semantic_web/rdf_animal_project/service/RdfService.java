@@ -89,11 +89,12 @@ public class RdfService {
         List<Map> res = new ArrayList<>();
         Repository repository = ConnectSparql.getInstance();
         try (RepositoryConnection conn = repository.getConnection()){
-            String query = "SELECT ?s ?p ?o WHERE {  " +
-                    "{?s ?p ?o.\n" +
-                    " ?s ?p1 \""+name+"\"\n" +
+            String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+                    "SELECT ?s ?p ?o WHERE {  " +
+                    "{?s ?pred ?o.\n" +
+                    " ?s ?p1 \""+name+"\". ?pred rdfs:label ?p\n" +
                     "}\n" +
-                    "?s ?p ?o}";
+                    "}";
             TupleQuery tupleQuery = conn.prepareTupleQuery(query);
             try (TupleQueryResult result = tupleQuery.evaluate()){
                 while (result.hasNext()){
