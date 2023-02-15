@@ -10,7 +10,7 @@ am:Animal a rdfs:Class ;
        [owl:unionOf (am:Bird am:Reptile am:Fish)].
 
 am:Bird rdfs:label "Bird";
-    rdfs:comment "A class representing a bird species."
+    rdfs:comment "A class representing a bird species.";
 	owl:equivalentClass
        [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
 
