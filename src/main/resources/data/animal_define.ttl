@@ -4,7 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
 @prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
 
-am:Animal a rdfs:Class ;
+am:Animal a owl:Class ;
 	rdfs:label "Animal" ;
 	owl:equivalentClass
        [owl:unionOf (am:Bird am:Reptile am:Fish)].
@@ -14,7 +14,7 @@ am:Bird rdfs:label "Bird";
 	owl:equivalentClass
        [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
 
-am:Organism a rdfs:Class ;
+am:Organism a owl:Class ;
     rdfs:label "Organism" ;
     rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
 
@@ -23,7 +23,7 @@ am:hasUnit a owl:DatatypeProperty;
     rdfs:range xsd:string;
     rdfs:label "has unit".
 
-am:animalName a rdfs:property;
+am:animalName a owl:DatatypeProperty;
     rdfs:label "name";
     rdfs:domain am:Animal;
     rdfs:range xsd:string .
@@ -87,27 +87,27 @@ am:omnivore owl:intersectionOf
   rdfs:comment "Lớp động vật ăn cả động vật và thực vật";
   rdfs:label "omnivore".
 
-am:longevity a rdfs:property;
+am:longevity a owl:DatatypeProperty;
     rdfs:domain am:Animal;
     rdfs:comment "Số năm sống của động vật";
     rdfs:range xsd:nonNegativeInteger;
     rdfs:label "longevity".
 
-am:reproduction a rdfs:property;
+am:reproduction a owl:DatatypeProperty;
     rdfs:label "longevity";
     rdfs:comment "Số trứng đẻ ra trong 1 lần sinh sản của động vật";
     rdfs:domain am:Animal;
     rdfs:range xsd:nonNegativeInteger .
 
 #chiều cao
-am:height a rdfs:property;
+am:height a owl:DatatypeProperty;
     rdfs:label "height";
     rdfs:domain am:Animal;
     rdfs:description "height of animal";
     rdfs:range xsd:nonNegativeDouble;
     am:hasUnit "cm" .
 #cân nặng
-am:weigh a rdfs:property;
+am:weigh a owl:DatatypeProperty;
     rdfs:label "weigh";
     rdfs:domain am:Animal;
     rdfs:description "weigh of animal";
@@ -115,53 +115,53 @@ am:weigh a rdfs:property;
     am:hasUnit "g" .
 
 # Thức ăn
-am:food a rdfs:property;
+am:food a owl:DatatypeProperty;
     rdfs:label "food";
     rdfs:description "something animal eat";
     rdfs:domain am:Organism;
     rdfs:range xsd:string .
 
 # Sải cánh
-am:wingspan a rdfs:property;
+am:wingspan a owl:DatatypeProperty;
     rdfs:label "wingspan";
     rdfs:domain am:Bird;
     rdfs:description "the length of the bird's wings";
     rdfs:range xsd:nonNegativeDouble;
     am:hasUnit "cm" .
 # Tập tính
-am:custom a rdfs:property;
+am:custom a owl:DatatypeProperty;
     rdfs:label "custom";
     rdfs:description "Living habits";
     rdfs:domain am:Bird;
     rdfs:range xsd:string .
 
 # Môi trường sống
-am:habitat a rdfs:property;
+am:habitat a owl:DatatypeProperty;
     rdfs:label "habitat";
     rdfs:description "the space in which animals live";
     rdfs:range xsd:string .
 
 #tốc độ di chuyển
-am:speed a rdfs:property;
+am:speed a owl:DatatypeProperty;
     rdfs:label "speed";
     rdfs:description "an animal's ability to move fast or slow";
     rdfs:domain am:Animal;
     rdfs:range xsd:nonNegativeDouble;
     am:hasUnit "km/h" .
 
-am:color a rdfs:property;
+am:color a owl:DatatypeProperty;
     rdfs:label "color";
     rdfs:description "the animal's color";
     rdfs:domain am:Animal;
     rdfs:range xsd:string .
 
-am:binomialClass a rdfs:property;
+am:binomialClass a owl:DatatypeProperty;
     rdfs:label "class" ;
     rdfs:comment "A taxonomic class of the bird." ;
     rdfs:domain am:Bird ;
     rdfs:range xsd:string .
 
-am:binomialName a rdfs:property;
+am:binomialName a owl:DatatypeProperty;
      rdfs:label "binomial name" ;
      rdfs:comment "The binomial name of the bird." ;
      rdfs:domain am:Bird ;

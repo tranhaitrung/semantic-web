@@ -4,10 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XLMSchema#> .
 @prefix am: <http://www.semantic-web.hust.edu.vn/animal#> .
 
-am:Bird rdfs:label "Bird";
-	owl:equivalentClass
-       [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
-
 am:FlyingBird a owl:Class;
     rdfs:subClassOf am:Bird;
 	am:animalName "Flying bird";
