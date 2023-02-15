@@ -8,32 +8,32 @@ am:Bird rdfs:label "Bird";
 	owl:equivalentClass
        [owl:unionOf (am:FlyingBird am:RunningBird am:SwimmingBird)] .
 
-am:FlyingBird rdfs:subClassOf am:Bird,
-	[a owl:Restriction ;
-	  owl:onProperty am:spawn ;
-	  owl:allValuesFrom am:Egg],
-	[a owl:Restriction;
-	  owl:onProperty am:move ;
-	  owl:allValuesFrom am:fly];
-	am:animalName "Flying bird" .
+am:FlyingBird a owl:Class;
+    rdfs:subClassOf am:Bird;
+	am:animalName "Flying bird";
+	owl:equivalentClass [a owl:Restriction;
+                       owl:onProperty am:canFly;
+                       owl:hasValue true ].
 
-am:RunningBird rdfs:subClassOf am:Bird,
-	[a owl:Restriction;
-	  owl:onProperty am:move ;
-	  owl:allValuesFrom am:run];
+am:RunningBird a owl:Class;
+    rdfs:subClassOf am:Bird;
     am:animalName "Running bird" ;
-	owl:disjointWith am:FlyingBird .
+	owl:disjointWith am:FlyingBird;
+    owl:equivalentClass [a owl:Restriction;
+                        owl:onProperty am:canRun;
+                        owl:hasValue true ].
 
-am:SwimmingBird rdfs:subClassOf am:Bird,
-	[a owl:Restriction ;
-	  owl:onProperty am:move ;
-	  owl:allValuesFrom am:swim] ;
+am:SwimmingBird a owl:Class;
+    rdfs:subClassOf am:Bird;
 	am:animalName "Swimming bird" ;
-	owl:disjointWith am:FlyingBird .
+	owl:disjointWith am:FlyingBird ;
+    owl:equivalentClass [a owl:Restriction;
+                        owl:onProperty am:canSwim;
+                        owl:hasValue true ].
 
 am:Ostrich owl:intersectionOf (am:RunningBird am:omnivore);
     am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
-	am:reproduction "50"^^<http://www.w3.org/2001/XMLSchema#integer>;
+	am:reproduction "8"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:height "250"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:weigh "130000"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
     am:wingspan "200"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;
@@ -101,7 +101,7 @@ am:Kiwi owl:intersectionOf (am:RunningBird  am:omnivore);
     am:binomialName "Apteryx mantelli"^^<http://www.w3.org/2001/XMLSchema#string>;
 	am:animalName "Kiwi" .
 
-am:am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
+am:Eagle  owl:intersectionOf (am:FlyingBird am:carnivore);
 	am:longevity "30"^^<http://www.w3.org/2001/XMLSchema#integer>;
 	am:reproduction "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
     am:height "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeDouble>;

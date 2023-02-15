@@ -19,14 +19,32 @@ am:Organism a rdfs:Class ;
     rdfs:comment "A class that represents all living things, including animals, plants, and microorganisms." .
 
 am:hasUnit a owl:DatatypeProperty;
-    rdfs:domain am:Property;
+    rdfs:domain am:Animal;
     rdfs:range xsd:string;
     rdfs:label "has unit".
 
-am:animalName a rdf:property;
+am:animalName a rdfs:property;
     rdfs:label "name";
     rdfs:domain am:Animal;
     rdfs:range xsd:string .
+
+am:canFly a owl:ObjectProperty;
+    rdfs:label "can fly";
+    rdfs:comment "Được sử dụng để chỉ các loài chim có khả năng bay";
+    rdfs:domain am:Bird;
+    rdfs:range xsd:boolean.
+
+am:canSwim a owl:ObjectProperty;
+    rdfs:label "can swim";
+    rdfs:comment "Được sử dụng để chỉ các loài chim có khả năng bơi";
+    rdfs:domain am:Bird;
+    rdfs:range xsd:boolean.
+
+am:canRun a owl:ObjectProperty;
+    rdfs:label "can run";
+    rdfs:comment "Được sử dụng để chỉ các loài chim có khả năng chạy";
+    rdfs:domain am:Bird;
+    rdfs:range xsd:boolean.
 
 am:spawn a owl:Class;
     rdfs:subClassOf am:Animal;
@@ -37,7 +55,8 @@ am:spawn a owl:Class;
                          owl:allValuesFrom am:Egg
                        ].
 
-am:herbivore owl:intersectionOf
+am:herbivore a owl:Class ;
+ owl:intersectionOf
     (am:Animal
         [a owl:Restriction;
         owl:onProperty am:eats;
@@ -68,47 +87,18 @@ am:omnivore owl:intersectionOf
   rdfs:comment "Lớp động vật ăn cả động vật và thực vật";
   rdfs:label "omnivore".
 
-am:longevity a owl:DatatypeProperty;
+am:longevity a rdfs:property;
     rdfs:domain am:Animal;
+    rdfs:comment "Số năm sống của động vật";
     rdfs:range xsd:nonNegativeInteger;
     rdfs:label "longevity".
 
-am:reproduction a owl:DatatypeProperty;
+am:reproduction a rdfs:property;
+    rdfs:label "longevity";
+    rdfs:comment "Số trứng đẻ ra trong 1 lần sinh sản của động vật";
     rdfs:domain am:Animal;
     rdfs:range xsd:nonNegativeInteger .
 
-am:hasWing rdfs:subClassOf
-	[a owl:Restriction;
-       owl:allValuesFrom am:body;
-	   owl:onProperty am:isPartOf] .
-
-am:hasLeg rdfs:subClassOf
-	[a owl:Restriction;
-       owl:allValuesFrom am:body;
-	   owl:onProperty am:isPartOf] .
-
-am:hasGill rdfs:subClassOf
-	[a owl:Restriction;
-       owl:allValuesFrom am:body ;
-	   owl:onProperty am:isPartOf] .
-
-am:wing owl:intersectionOf(am:Animal
-	[a owl:Restriction;
-	owl:onProperty am:hasWing;
-	owl:allValuesFrom am:Animal
-	]) .
-
-am:leg owl:intersectionOf(am:Animal
-	[a owl:Restriction;
-	owl:onProperty am:hasLeg;
-	owl:allValuesFrom am:Animal
-	]) .
-
-am:gill owl:intersectionOf(am:Animal
-	[a owl:Restriction;
-	owl:onProperty am:hasGill;
-	owl:allValuesFrom am:Animal
-	]) .
 #chiều cao
 am:height a rdfs:property;
     rdfs:label "height";
@@ -176,22 +166,5 @@ am:binomialName a rdfs:property;
      rdfs:comment "The binomial name of the bird." ;
      rdfs:domain am:Bird ;
      rdfs:range xsd:string .
-
-
-am:Family a rdfs:Class ;
-    rdfs:label "Family" ;
-    rdfs:comment "A class that represents a group of related bird species." .
-
-am:Ordo a rdfs:Class ;
-    rdfs:label "Ordo" ;
-    rdfs:comment "A class that represents a taxonomic grouping of related bird families." .
-
-am:Class a rdfs:Class ;
-    rdfs:label "Class" ;
-    rdfs:comment "A class that represents a taxonomic grouping of related bird orders." .
-
-am:Species a rdfs:Class ;
-    rdfs:label "Species" ;
-    rdfs:comment "A species is a fundamental category of taxonomic classification, rank below a genus." .
 
 

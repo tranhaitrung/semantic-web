@@ -10,7 +10,9 @@ public class main_test {
     public static void main(String[] args) {
         Model defineAnimalModel = File.readFileRdf(Constant.PathFileTtl.animalDefinePath);
         Model birdModel = File.readFileRdf(Constant.PathFileTtl.animalBirdPath);
-        InfModel infmodel = ModelFactory.createRDFSModel(defineAnimalModel, birdModel);
-        infmodel.write(System.out);
+//        Model birdModel1 = File.readFileRdf("data/data.ttl");
+//        birdModel1.write(System.out);
+//        InfModel infmodel = ModelFactory.createRDFSModel(defineAnimalModel, birdModel);
+//        infmodel.write(System.out);
     }
 }
