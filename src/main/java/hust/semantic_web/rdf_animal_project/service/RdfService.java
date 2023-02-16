@@ -22,7 +22,7 @@ public class RdfService {
                     "PREFIX am:  <http://www.semantic-web.hust.edu.vn/animal#>" +
                     "SELECT distinct ?s ?p ?o \n" +
                             "WHERE {  \n" +
-                            "  {?s ?p \""+name+"\" } \n" +
+                            "  {?s am:animalName ?o. ?s ?p1 \""+name+"\" } \n" +
                             "  UNION\n" +
                             "  {?s am:animalName ?o.\n" +
                             "  ?s ?p1 ?o1.\n" +
@@ -86,6 +86,7 @@ public class RdfService {
     }
 
     public Object getDetail(String name) {
+
         List<Map> res = new ArrayList<>();
         Repository repository = ConnectSparql.getInstance();
         try (RepositoryConnection conn = repository.getConnection()){
@@ -97,6 +98,8 @@ public class RdfService {
                     "}";
             TupleQuery tupleQuery = conn.prepareTupleQuery(query);
             try (TupleQueryResult result = tupleQuery.evaluate()){
+                TupleQueryResult resultTurtle = tupleQuery.evaluate();
+
                 while (result.hasNext()){
                     BindingSet binding = result.next();
                     Value valueOfS = binding.getValue("s");
